@@ -25,7 +25,7 @@ def main():
   sess.run(init)
 
   batch_start = time.time()
-  for epoch in range(100):
+  for epoch in range(300):
     for (single_x,single_y) in zip(train_x,train_y):
       sess.run(train_step, feed_dict={x: single_x, y: single_y})
 
