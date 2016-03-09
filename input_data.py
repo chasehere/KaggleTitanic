@@ -12,7 +12,7 @@ class DataSet(object):
     self._features = features
     self._targets = targets
     self._epochs_completed = 0
-    self._index_in_epochs = 0
+    self._index_in_epoch = 0
 
   @property
   def ids(self):
@@ -54,7 +54,7 @@ class DataSet(object):
       assert batch_size <= self._num_examples
 
     end = self._index_in_epoch
-    return self._images[start:end], self._labels[start:end]
+    return self._features[start:end], self._targets[start:end]
 
 
 def read_data_sets():
