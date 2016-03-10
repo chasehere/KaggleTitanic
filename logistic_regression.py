@@ -55,7 +55,7 @@ def main():
   sess.close()
 
   # Write data to file
-  test_pred = np.round(test_pred)
+  test_pred = int(np.round(test_pred))
   df = pd.DataFrame({'PassengerId' : data.test.ids[:,0], 'Survived' : test_pred[:,0]})
   df.to_csv('data/tensorflow_benchmark.csv', index=False) 
 

@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 
+pd.options.mode.chained_assignment = None
+
 class DataSet(object):
   def __init__(self,ids,features,targets):
     assert features.shape[0] == targets.shape[0], (
