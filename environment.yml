@@ -1,0 +1,8 @@
+name: tf 
+dependencies: 
+- python =2.7.*
+- scikit-learn
+- matplotlib
+- numpy 
+- pandas
+- dateutil
